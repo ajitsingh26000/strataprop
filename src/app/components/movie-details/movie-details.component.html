@@ -1,0 +1,14 @@
+<div class="d-flex justify-between">
+  <button mat-button color="warn" (click)="deleteMovie()" class="btn delete-btn">Delete</button>
+
+  <button mat-dialog-close class="close-btn btn">&times;</button>
+</div>
+<h2>{{data.movie.title}}
+</h2>
+<div class="d-flex justify-between align-center">
+  <div class="d-flex">
+    <div class="status-text">{{data.movie.status|titlecase}}</div>
+    <div class="status-text">Rating: {{data.movie.rating}}</div>
+  </div>
+</div>
+<p>{{data.movie.details}}</p>

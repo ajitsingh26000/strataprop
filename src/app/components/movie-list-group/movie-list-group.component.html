@@ -1,0 +1,4 @@
+<button class="create-btn" mat-raised-button (click)="openCreateMovie()">Create Movie +</button>
+<div class="d-flex list-group" cdkDropListGroup>
+  <app-movie-list class="movie-list" [movieList]="movieList" *ngFor="let movieList of movieLists"></app-movie-list>
+</div>

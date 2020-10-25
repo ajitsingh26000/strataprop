@@ -7,6 +7,7 @@ import { MovieService } from 'src/app/services/movie.service';
   selector: 'app-create-movie',
   templateUrl: './create-movie.component.html',
   styleUrls: ['./create-movie.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreateMovieComponent {
   submitted = false;

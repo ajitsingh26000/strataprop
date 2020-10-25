@@ -16,7 +16,6 @@ export class CreateMovieComponent {
     details: new FormControl('', [Validators.required]),
     rating: new FormControl('', [Validators.required]),
   });
-  c = this.movieF.controls.title.errors?.required;
   constructor(
     public dialogRef: MatDialogRef<CreateMovieComponent>,
     public movieS: MovieService

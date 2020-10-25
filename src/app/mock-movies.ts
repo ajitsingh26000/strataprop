@@ -9,15 +9,17 @@ export const MOCK_MOVIES: MList[] = [
       {
         id: '0001',
         status: MovieStatus.WATCH,
-        title: 'Behind the 900 stars - Update 08/2020',
-        details: 'sdhkj',
+        title: 'The Shawshank Redemption',
+        details:
+          'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
         rating: '5',
       },
       {
         id: '0002',
         status: MovieStatus.WATCH,
-        title: 'Who is the author of Angular Jira clone?',
-        details: 'sdhkj',
+        title: 'The Godfather',
+        details:
+          'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.',
         rating: '4',
       },
     ],
@@ -29,8 +31,9 @@ export const MOCK_MOVIES: MList[] = [
       {
         id: '0003',
         status: MovieStatus.IN_PROGRESS,
-        title: 'Set up Akita state management',
-        details: 'sdhkj',
+        title: 'The Godfather: Part II',
+        details:
+          'The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.',
         rating: '3',
       },
     ],
@@ -42,8 +45,8 @@ export const MOCK_MOVIES: MList[] = [
       {
         id: '0004',
         status: MovieStatus.WATCHED,
-        title: 'Preparing backend API with GraphQL',
-        details: 'sdhkj',
+        title: '12 Angry Men',
+        details: 'A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.',
         rating: '1',
       },
     ],
@@ -55,8 +58,9 @@ export const MOCK_MOVIES: MList[] = [
       {
         id: '0005',
         status: MovieStatus.REVIEWED,
-        title: 'Preparing backend API with GraphQL',
-        details: 'sdhkj',
+        title: 'The Dark Knight',
+        details:
+          'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
         rating: '2',
       },
     ],

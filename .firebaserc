@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "strataprop-5004d"
+  },
+  "targets": {
+    "strataprop-5004d": {
+      "hosting": {
+        "task-management": [
+          "strataprop-5004d"
+        ]
+      }
+    }
+  }
+}

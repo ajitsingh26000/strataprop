@@ -1,5 +1,5 @@
 <div class="movie-wrap">
-  <div (click)="showDetails()" class="movie">
+  <div (click)="this.movieDetails.emit(movie)" class="movie">
     <p class="movie-inner">
       {{ movie.title }}
     </p>

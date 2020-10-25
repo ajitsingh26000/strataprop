@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { MOCK_MOVIES } from 'src/app/mock-movies';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-create-movie',
   templateUrl: './create-movie.component.html',
   styleUrls: ['./create-movie.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreateMovieComponent {
   movieF = new FormGroup({
@@ -15,15 +16,9 @@ export class CreateMovieComponent {
     details: new FormControl('', [Validators.required]),
     rating: new FormControl('', [Validators.required]),
   });
-  constructor(public dialogRef: MatDialogRef<CreateMovieComponent>) {}
+  constructor(
+    public dialogRef: MatDialogRef<CreateMovieComponent>,
+    public movieS: MovieService
+  ) {}
 
-
-  addMovie(): void {
-    if (this.movieF.valid) {
-      MOCK_MOVIES.find(
-        (movieList) => movieList.id === this.movieF.value.status
-      )?.movies.push({ id: Date.now(), ...this.movieF.value });
-      this.dialogRef.close();
-    }
-  }
 }

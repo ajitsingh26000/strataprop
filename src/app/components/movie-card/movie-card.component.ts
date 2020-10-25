@@ -21,8 +21,4 @@ export class MovieCardComponent {
   @Output() movieDetails = new EventEmitter<Movie>();
 
   constructor(public dialog: MatDialog) {}
-
-  showDetails(): void {
-    this.movieDetails.emit(this.movie);
-  }
 }

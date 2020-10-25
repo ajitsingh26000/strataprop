@@ -1,6 +1,6 @@
 <div class="d-flex justify-between">
-  <button mat-button color="warn" (click)="deleteMovie()" class="btn delete-btn">Delete</button>
-
+  <button mat-button color="warn" (click)="movieS.deleteMovie(data.movie,dialogRef)"
+    class="btn delete-btn">Delete</button>
   <button mat-dialog-close class="close-btn btn">&times;</button>
 </div>
 <h2>{{data.movie.title}}

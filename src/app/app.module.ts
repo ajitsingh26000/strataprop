@@ -12,6 +12,7 @@ import { CreateMovieComponent } from './components/create-movie/create-movie.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatDialogModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,7 +2,7 @@
   <div class="list-title">
     {{ movieList.title }} ({{movieList.movies.length}})
   </div>
-  <div class="movie-card-container" cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="movieList.movies"
+  <div class="movie-card-container" cdkDropList (cdkDropListDropped)="dropEvent.emit($event)" [cdkDropListData]="movieList.movies"
     [id]="movieList.id">
     <app-movie-card *ngFor="let movie of movieList.movies" (movieDetails)="showDetails($event)" [movie]="movie" [cdkDragData]="movie" cdkDrag>
     </app-movie-card>

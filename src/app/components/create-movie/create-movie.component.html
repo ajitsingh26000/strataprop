@@ -2,14 +2,16 @@
   <h2>Create Movie</h2><button mat-dialog-close class="btn">&times;</button>
 </div>
 
-<form [formGroup]="movieF" (ngSubmit)="this.movieS.addMovie(movieF,dialogRef)">
+<form [formGroup]="movieF" (ngSubmit)="this.movieS.addMovie(movieF,dialogRef);submitted=true">
   <div class="form-group">
     <label>Movie Name</label>
-    <input formControlName="title" class="form-control w-100">
+    <input formControlName="title" [class.error]="submitted && movieF.controls.title.errors?.required"
+      class="form-control w-100">
   </div>
   <div class="form-group">
     <label>Movie Status</label>
-    <select formControlName="status" class="form-control w-100">
+    <select formControlName="status" [class.error]="submitted && movieF.controls.status.errors?.required"
+      class="form-control w-100">
       <option value="watch">To Watch</option>
       <option value="InProgress">In Progress</option>
       <option value="watched">Watched</option>
@@ -18,7 +20,8 @@
   </div>
   <div class="form-group">
     <label>Rating</label>
-    <select formControlName="rating" class="form-control w-100">
+    <select formControlName="rating" [class.error]="submitted && movieF.controls.rating.errors?.required"
+      class="form-control w-100">
       <option value=1>1</option>
       <option value=2>2</option>
       <option value=3>3</option>
@@ -28,8 +31,11 @@
   </div>
   <div class="form-group">
     <label>Movie details</label>
-    <textarea formControlName="details" class="form-control w-100"></textarea>
+    <textarea formControlName="details" [class.error]="submitted && movieF.controls.details.errors?.required"
+      class="form-control w-100"></textarea>
   </div>
+  <div class="error-msg" *ngIf="submitted && movieF.invalid
+  ">All fields are required please fill all fields</div>
 
   <div>
     <button class="submit-btn" mat-raised-button type="submit">Create Movie</button>

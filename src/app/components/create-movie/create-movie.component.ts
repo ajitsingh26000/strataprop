@@ -7,18 +7,18 @@ import { MovieService } from 'src/app/services/movie.service';
   selector: 'app-create-movie',
   templateUrl: './create-movie.component.html',
   styleUrls: ['./create-movie.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreateMovieComponent {
+  submitted = false;
   movieF = new FormGroup({
     title: new FormControl('', Validators.required),
     status: new FormControl('', [Validators.required]),
     details: new FormControl('', [Validators.required]),
     rating: new FormControl('', [Validators.required]),
   });
+  c = this.movieF.controls.title.errors?.required;
   constructor(
     public dialogRef: MatDialogRef<CreateMovieComponent>,
     public movieS: MovieService
   ) {}
-
 }
